@@ -25,7 +25,11 @@ namespace Fira_Admin
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                       "~/Static/css/main.css"));
+            bundles.Add(new ScriptBundle("~/bundles/pageScripts").Include(
+                  "~/Static/javaScript/main.js*"));
+
         }
     }
 }
