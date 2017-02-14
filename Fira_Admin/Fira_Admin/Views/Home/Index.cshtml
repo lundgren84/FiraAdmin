@@ -1,40 +1,53 @@
-﻿@{
+﻿@using Microsoft.AspNet.Identity
+
+@{
     ViewBag.Title = "Home Page";
 }
+
 
 <div class="jumbotron">
     <h1>Welcome!</h1>
     <p class="lead">Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
+   @if (!Request.IsAuthenticated)
+   {
     <p>
         <a href="http://asp.net" class="btn btn-primary btn-lg">Log in &raquo;</a>
     </p>
+   }
+    
 </div>
+  
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Time stamp</h2>
-        <p>
-            Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
-        </p>
-        <p><a class="btn btn-default" href="/#">Time stamp &raquo;</a>
-        </p>
+@if (Request.IsAuthenticated)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Time stamp</h2>
+            <p>
+                Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+            </p>
+            <p>
+                <a class="btn btn-default" href="/#">Time stamp &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Time stamp</h2>
+            <p>
+                Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+            </p>
+            <p>
+                <a class="btn btn-default" href="/#">Time stamp &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Time stamp</h2>
+            <p>
+                Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+            </p>
+            <p>
+                <a class="btn btn-default" href="/#">Time stamp &raquo;</a>
+            </p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Time stamp</h2>
-        <p>
-            Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
-        </p>
-        <p>
-            <a class="btn btn-default" href="/#">Time stamp &raquo;</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Time stamp</h2>
-        <p>
-            Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
-        </p>
-        <p>
-            <a class="btn btn-default" href="/#">Time stamp &raquo;</a>
-        </p>
-    </div>
-</div>
+}
+

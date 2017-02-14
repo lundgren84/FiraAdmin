@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConnectionLayer.Tables;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace ConnectionLayer
 {
-   public class FiraAdmin_Context : DbContext
+    public class FiraAdmin_Context : DbContext
     {
-       FiraAdmin_Context()
-       {
-           
-       }
+        public FiraAdmin_Context()
+        {
+
+        }
+        public DbSet<tbl_Account> Accounts { get; set; }
     }
 }

@@ -1,0 +1,48 @@
+﻿@model List<ConnectionLayer.Tables.tbl_Account>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Admin</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Email
+
+                </td>
+                <td>
+                    @item.Admin
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@using (Ajax.BeginForm("_LoginTest", "Home", null, new AjaxOptions() { HttpMethod = "POST" }))
+{
+    <p>Email</p>
+    @Html.TextBox("email");
+    <p>Password</p>
+    @Html.Password("password");
+    <input type="submit" value="Sign In">
+}
+
+
+
+
+
+
+
+
